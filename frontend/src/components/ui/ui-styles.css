@@ -1,0 +1,115 @@
+/* UI Component Styles */
+
+.glow-card {
+  background-color: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 50px rgba(14, 165, 233, 0.15);
+  border-color: var(--primary);
+}
+
+.glow-button {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: var(--font-inter);
+  color: white;
+}
+
+.glow-button:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.glow-button.primary {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.glow-button.accent {
+  background: linear-gradient(135deg, #10b981, #0ea5e9);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.glow-button.danger {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.glow-button.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.glow-button.ghost:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+  color: var(--primary);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+}
+
+.status-badge.primary {
+  background-color: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.2);
+  color: var(--primary);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.1);
+}
+
+.status-badge.accent {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+  color: var(--accent);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.1);
+}
+
+.status-badge.danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.1);
+}
+
+.section-title-container {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+}

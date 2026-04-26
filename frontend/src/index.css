@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #050914;
+  --surface: #0d1526;
+  --surface-light: #111d35;
+  --border: #1a2d4a;
+  --primary: #0ea5e9;
+  --primary-glow: #38bdf8;
+  --accent: #10b981;
+  --accent-alt: #8b5cf6;
+  --danger: #ef4444;
+  --text: #e2e8f0;
+  --text-muted: #64748b;
+  --font-inter: 'Inter', sans-serif;
+  
+  /* Responsive Spacing Variables */
+  --page-padding: 32px;
+  --card-padding: 24px;
+  --grid-gap: 24px;
+  --sidebar-width: 240px;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --page-padding: 24px;
+    --card-padding: 20px;
+    --grid-gap: 16px;
+    --sidebar-width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-padding: 16px;
+    --card-padding: 16px;
+    --grid-gap: 12px;
+    --sidebar-width: 0px; /* Hidden on mobile */
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#050914] text-[#e2e8f0] font-sans antialiased min-h-screen overflow-x-hidden;
+    margin: 0;
+    font-family: var(--font-inter);
+  }
+
+  /* Fluid Typography Scale */
+  h1 { font-size: clamp(24px, 5vw, 56px); font-weight: 800; line-height: 1.1; }
+  h2 { font-size: clamp(20px, 3.5vw, 36px); font-weight: 700; }
+  h3 { font-size: clamp(18px, 2.5vw, 24px); font-weight: 600; }
+  p, div { font-size: clamp(14px, 1.5vw, 16px); }
+  small { font-size: clamp(12px, 1vw, 13px); }
+
+  /* Touch Improvements */
+  button, a {
+    min-height: 44px;
+    touch-action: manipulation;
+    transition: transform 0.1s ease;
+  }
+  
+  button:active, a:active {
+    transform: scale(0.97);
+  }
+
+  input, select, textarea {
+    min-height: 48px;
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .gradient-text-animated {
+    background: linear-gradient(135deg, #0ea5e9, #8b5cf6, #10b981, #0ea5e9);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .glass-panel {
+    background: rgba(13, 21, 38, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+  }
+
+  .hide-on-mobile {
+    @media (max-width: 767px) { display: none !important; }
+  }
+
+  .show-only-mobile {
+    @media (min-width: 768px) { display: none !important; }
+  }
+}
+
+/* Mobile Bottom Navigation */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #0d1526;
+  border-top: 1px solid #1a2d4a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 998;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 10px;
+  gap: 4px;
+}
+
+.mobile-nav-item.active {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+/* Demo Banner */
+.demo-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  z-index: 1001;
+}
+
+@media (min-width: 1024px) { .demo-banner { height: 36px; font-size: 13px; } }
+@media (min-width: 768px) and (max-width: 1023px) { .demo-banner { height: 32px; font-size: 11px; } }
+@media (max-width: 767px) { .demo-banner { height: 28px; font-size: 10px; } }

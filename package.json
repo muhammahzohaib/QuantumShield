@@ -1,0 +1,14 @@
+{
+  "name": "quantumshield-saas",
+  "version": "1.0.0",
+  "description": "Quantum-Safe Security SaaS Platform",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "npx concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
