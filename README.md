@@ -1,5 +1,7 @@
 # 🛡️ QuantumShield: Next-Gen Privacy-First SaaS
 
+Live demo: https://quantumshield-80762694433.asia-southeast1.run.app/
+
 ![QuantumShield Banner](https://img.shields.io/badge/Security-Quantum--Safe-0ea5e9?style=for-the-badge&logo=shield)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Cloud%20%26%20Firebase-white?style=for-the-badge&logo=google-cloud)
 ![License](https://img.shields.io/badge/Competition-Google%20AI%202025-8b5cf6?style=for-the-badge)
