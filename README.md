@@ -116,4 +116,4 @@ QuantumShield features a robust testing environment to ensure security complianc
 Developed by **Muhammad Zohaib** for the **AISehako Competition**.
 
 ---
-*Disclaimer: This project is a security simulation and technical demonstration built for the Google AI 2025 competition.*
+*Disclaimer: This project is a security simulation and technical demonstration built for the Google AI 2026 competition.*
